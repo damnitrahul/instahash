@@ -67,7 +67,9 @@ function Downloader() {
             handleProfileLoad={handleProfileLoad}
           />
         </div>
-        {profile.userProfile !== '' && <Profile profile={profile} />}
+        {profile.userProfile !== '' && !user.error && (
+          <Profile profile={profile} />
+        )}
 
         {user.error && (
           <p style={{ textAlign: 'center' }}>
