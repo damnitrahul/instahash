@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './Hashtag.scss';
-import { fetchReq, fetchReq2 } from '../../fetchFunctions/Functions';
+import { fetchReq } from '../../fetchFunctions/Functions';
 import Tags from './Tags';
 import TagsBundle from './TagsBundle';
 import icon from '../../icons/icons.svg';
-import {
-  SkeletonLoaderSmall,
-  SkeletonLoaderBig
-} from '../loader/SkeletonLoader';
+import { SkeletonLoaderBig } from '../loader/SkeletonLoader';
 import TagsLoadingArea from '../loader/TagsLoadingArea';
+
 function Hashtag() {
   const [search, setSearch] = useState('');
   const [hash, setHash] = useState({ loading: false, data: [] });

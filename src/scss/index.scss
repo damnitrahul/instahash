@@ -14,7 +14,14 @@ html {
   font-family: 'Quicksand', sans-serif;
   background-color: $white;
 }
-
+#App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  footer {
+    margin-top: auto;
+  }
+}
 .container {
   max-width: 1100px;
   padding: 1rem;
