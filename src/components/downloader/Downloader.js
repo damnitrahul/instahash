@@ -67,15 +67,13 @@ function Downloader() {
             handleProfileLoad={handleProfileLoad}
           />
         </div>
-        {profile.userProfile !== '' && !user.error && (
-          <Profile profile={profile} />
-        )}
 
         {user.error && (
           <p style={{ textAlign: 'center' }}>
             No Users Found, Please Try Again!
           </p>
         )}
+        {profile.userProfile !== '' && <Profile profile={profile} />}
       </div>
     </section>
   );
